@@ -1,0 +1,69 @@
+# Project: Assignment 7
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = main.o PrintHeader.o CandidateConstructors.o CandidateDestructor.o CandidateGetNameAge.o CandidateGetGenderHeightWeight.o CandidateSetNameAge.o CandidateSetGenderHeightWeight.o CandidateSetAll.o CandidatePartialConstructors.o CandidateSetAllPartials.o ValidateChars.o ValidateInt.o ValidateFloat.o $(RES)
+LINKOBJ  = main.o PrintHeader.o CandidateConstructors.o CandidateDestructor.o CandidateGetNameAge.o CandidateGetGenderHeightWeight.o CandidateSetNameAge.o CandidateSetGenderHeightWeight.o CandidateSetAll.o CandidatePartialConstructors.o CandidateSetAllPartials.o ValidateChars.o ValidateInt.o ValidateFloat.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib"  
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = "Assignment 7.exe"
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before "Assignment 7.exe" all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "Assignment 7.exe" $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+PrintHeader.o: PrintHeader.cpp
+	$(CPP) -c PrintHeader.cpp -o PrintHeader.o $(CXXFLAGS)
+
+CandidateConstructors.o: CandidateConstructors.cpp
+	$(CPP) -c CandidateConstructors.cpp -o CandidateConstructors.o $(CXXFLAGS)
+
+CandidateDestructor.o: CandidateDestructor.cpp
+	$(CPP) -c CandidateDestructor.cpp -o CandidateDestructor.o $(CXXFLAGS)
+
+CandidateGetNameAge.o: CandidateGetNameAge.cpp
+	$(CPP) -c CandidateGetNameAge.cpp -o CandidateGetNameAge.o $(CXXFLAGS)
+
+CandidateGetGenderHeightWeight.o: CandidateGetGenderHeightWeight.cpp
+	$(CPP) -c CandidateGetGenderHeightWeight.cpp -o CandidateGetGenderHeightWeight.o $(CXXFLAGS)
+
+CandidateSetNameAge.o: CandidateSetNameAge.cpp
+	$(CPP) -c CandidateSetNameAge.cpp -o CandidateSetNameAge.o $(CXXFLAGS)
+
+CandidateSetGenderHeightWeight.o: CandidateSetGenderHeightWeight.cpp
+	$(CPP) -c CandidateSetGenderHeightWeight.cpp -o CandidateSetGenderHeightWeight.o $(CXXFLAGS)
+
+CandidateSetAll.o: CandidateSetAll.cpp
+	$(CPP) -c CandidateSetAll.cpp -o CandidateSetAll.o $(CXXFLAGS)
+
+CandidatePartialConstructors.o: CandidatePartialConstructors.cpp
+	$(CPP) -c CandidatePartialConstructors.cpp -o CandidatePartialConstructors.o $(CXXFLAGS)
+
+CandidateSetAllPartials.o: CandidateSetAllPartials.cpp
+	$(CPP) -c CandidateSetAllPartials.cpp -o CandidateSetAllPartials.o $(CXXFLAGS)
+
+ValidateChars.o: ValidateChars.cpp
+	$(CPP) -c ValidateChars.cpp -o ValidateChars.o $(CXXFLAGS)
+
+ValidateInt.o: ValidateInt.cpp
+	$(CPP) -c ValidateInt.cpp -o ValidateInt.o $(CXXFLAGS)
+
+ValidateFloat.o: ValidateFloat.cpp
+	$(CPP) -c ValidateFloat.cpp -o ValidateFloat.o $(CXXFLAGS)

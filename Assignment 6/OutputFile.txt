@@ -1,0 +1,90 @@
+***********************************************************
+* PROGRAMMER(S) : Kostyantyn S.
+* CLASS         : CS150
+* SECTION       : MW: 3:30pm - 5:20pm
+* Assignment #6 : Functions
+***********************************************************
+
+Please Enter your Account Number: 1234
+Please Enter the Sales Date.
+Enter Month: 2
+Enter Year: 2008
+Enter Day: 30
+** INVALID INPUT - Please enter a valid Day **
+Enter Day: 29
+Please Enter the Country Code: O
+Please Enter the Sales Amount: 235.75
+Please Enter the Weight: 28
+
+
+ACCOUNT NUMBER                         COUNTY
+     1234                          Orange County
+
+DATE OF SALE: 2/29/2008
+
+
+
+SALE AMOUNT:         $  235.75
+DISCOUNT:            $   11.79
+SALES TAX:           $   17.36
+SHIPPING:            $    5.30
+TOTAL DUE:           $  246.62
+
+
+
+Please Enter your Account Number: 4325
+Please Enter the Sales Date.
+Enter Month: 6
+Enter Year: 2018
+** INVALID INPUT - Please enter a valid Year **
+Enter Year: 2008
+Enter Day: 15
+Please Enter the Country Code: S
+Please Enter the Sales Amount: 157.50
+Please Enter the Weight: 15
+
+
+ACCOUNT NUMBER                         COUNTY
+     4325                         San Diego County
+
+DATE OF SALE: 6/15/2008
+
+
+
+SALE AMOUNT:         $  157.50
+DISCOUNT:            $   15.75
+SALES TAX:           $   11.69
+SHIPPING:            $    5.00
+TOTAL DUE:           $  158.44
+
+
+
+Please Enter your Account Number: 6754
+Please Enter the Sales Date.
+Enter Month: 13
+** INVALID INPUT - Please enter a valid Month **
+Enter Month: 12
+Enter Year: 2008
+Enter Day: 23
+Please Enter the Country Code: Q
+** INVALID INPUT - Please enter 'O', 'S' or 'L' **
+Please Enter the Country Code: L
+Please Enter the Sales Amount: 450.00
+Please Enter the Weight: 75
+
+
+ACCOUNT NUMBER                         COUNTY
+     6754                            LA County
+
+DATE OF SALE: 12/23/2008
+
+
+
+SALE AMOUNT:         $  450.00
+DISCOUNT:            $   67.50
+SALES TAX:           $   30.60
+SHIPPING:            $    9.25
+TOTAL DUE:           $  422.35
+
+
+
