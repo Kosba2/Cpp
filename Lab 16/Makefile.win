@@ -1,0 +1,63 @@
+# Project: Lab 16
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = Main.o GuestSetNameAge.o PrintHeader.o GuestGetNameAge.o GuestConstructors.o GuestDestructor.o GuestSetChocNutsPref.o GuestGetChocNutsPref.o GuestSetAll.o DetermineSnack.o DetermineDrink.o OutputGuestDetails.o $(RES)
+LINKOBJ  = Main.o GuestSetNameAge.o PrintHeader.o GuestGetNameAge.o GuestConstructors.o GuestDestructor.o GuestSetChocNutsPref.o GuestGetChocNutsPref.o GuestSetAll.o DetermineSnack.o DetermineDrink.o OutputGuestDetails.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib"  
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = "Lab 16.exe"
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before "Lab 16.exe" all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "Lab 16.exe" $(LIBS)
+
+Main.o: Main.cpp
+	$(CPP) -c Main.cpp -o Main.o $(CXXFLAGS)
+
+GuestSetNameAge.o: GuestSetNameAge.cpp
+	$(CPP) -c GuestSetNameAge.cpp -o GuestSetNameAge.o $(CXXFLAGS)
+
+PrintHeader.o: PrintHeader.cpp
+	$(CPP) -c PrintHeader.cpp -o PrintHeader.o $(CXXFLAGS)
+
+GuestGetNameAge.o: GuestGetNameAge.cpp
+	$(CPP) -c GuestGetNameAge.cpp -o GuestGetNameAge.o $(CXXFLAGS)
+
+GuestConstructors.o: GuestConstructors.cpp
+	$(CPP) -c GuestConstructors.cpp -o GuestConstructors.o $(CXXFLAGS)
+
+GuestDestructor.o: GuestDestructor.cpp
+	$(CPP) -c GuestDestructor.cpp -o GuestDestructor.o $(CXXFLAGS)
+
+GuestSetChocNutsPref.o: GuestSetChocNutsPref.cpp
+	$(CPP) -c GuestSetChocNutsPref.cpp -o GuestSetChocNutsPref.o $(CXXFLAGS)
+
+GuestGetChocNutsPref.o: GuestGetChocNutsPref.cpp
+	$(CPP) -c GuestGetChocNutsPref.cpp -o GuestGetChocNutsPref.o $(CXXFLAGS)
+
+GuestSetAll.o: GuestSetAll.cpp
+	$(CPP) -c GuestSetAll.cpp -o GuestSetAll.o $(CXXFLAGS)
+
+DetermineSnack.o: DetermineSnack.cpp
+	$(CPP) -c DetermineSnack.cpp -o DetermineSnack.o $(CXXFLAGS)
+
+DetermineDrink.o: DetermineDrink.cpp
+	$(CPP) -c DetermineDrink.cpp -o DetermineDrink.o $(CXXFLAGS)
+
+OutputGuestDetails.o: OutputGuestDetails.cpp
+	$(CPP) -c OutputGuestDetails.cpp -o OutputGuestDetails.o $(CXXFLAGS)

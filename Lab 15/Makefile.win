@@ -1,0 +1,57 @@
+# Project: Lab 15
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = Main.o SheepSetNameAgeBleat.o PrintHeader.o SheepGetNameAgeBleat.o SheepDefaultConstructor.o SheepGetHeightWeight.o SheepSetHeightWeight.o GetAndCheckCharResponse.o SheepOutputSheepDetails.o Output.o $(RES)
+LINKOBJ  = Main.o SheepSetNameAgeBleat.o PrintHeader.o SheepGetNameAgeBleat.o SheepDefaultConstructor.o SheepGetHeightWeight.o SheepSetHeightWeight.o GetAndCheckCharResponse.o SheepOutputSheepDetails.o Output.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib"  
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = "Lab 15.exe"
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before "Lab 15.exe" all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "Lab 15.exe" $(LIBS)
+
+Main.o: Main.cpp
+	$(CPP) -c Main.cpp -o Main.o $(CXXFLAGS)
+
+SheepSetNameAgeBleat.o: SheepSetNameAgeBleat.cpp
+	$(CPP) -c SheepSetNameAgeBleat.cpp -o SheepSetNameAgeBleat.o $(CXXFLAGS)
+
+PrintHeader.o: PrintHeader.cpp
+	$(CPP) -c PrintHeader.cpp -o PrintHeader.o $(CXXFLAGS)
+
+SheepGetNameAgeBleat.o: SheepGetNameAgeBleat.cpp
+	$(CPP) -c SheepGetNameAgeBleat.cpp -o SheepGetNameAgeBleat.o $(CXXFLAGS)
+
+SheepDefaultConstructor.o: SheepDefaultConstructor.cpp
+	$(CPP) -c SheepDefaultConstructor.cpp -o SheepDefaultConstructor.o $(CXXFLAGS)
+
+SheepGetHeightWeight.o: SheepGetHeightWeight.cpp
+	$(CPP) -c SheepGetHeightWeight.cpp -o SheepGetHeightWeight.o $(CXXFLAGS)
+
+SheepSetHeightWeight.o: SheepSetHeightWeight.cpp
+	$(CPP) -c SheepSetHeightWeight.cpp -o SheepSetHeightWeight.o $(CXXFLAGS)
+
+GetAndCheckCharResponse.o: GetAndCheckCharResponse.cpp
+	$(CPP) -c GetAndCheckCharResponse.cpp -o GetAndCheckCharResponse.o $(CXXFLAGS)
+
+SheepOutputSheepDetails.o: SheepOutputSheepDetails.cpp
+	$(CPP) -c SheepOutputSheepDetails.cpp -o SheepOutputSheepDetails.o $(CXXFLAGS)
+
+Output.o: Output.cpp
+	$(CPP) -c Output.cpp -o Output.o $(CXXFLAGS)

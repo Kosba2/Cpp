@@ -1,0 +1,58 @@
+# Project: Lab 17
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o PrintHeader.o InitializeIntArray.o ClearStringArray.o FindGreatestIntArray.o ArrayTrackValue.o FindStringInArray.o OutputArray.o SumIntegerArray.o AverageIntegerArray.o InputArray.o Untitled1.o
+LINKOBJ  = main.o PrintHeader.o InitializeIntArray.o ClearStringArray.o FindGreatestIntArray.o ArrayTrackValue.o FindStringInArray.o OutputArray.o SumIntegerArray.o AverageIntegerArray.o InputArray.o Untitled1.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = "Lab 17.exe"
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+PrintHeader.o: PrintHeader.cpp
+	$(CPP) -c PrintHeader.cpp -o PrintHeader.o $(CXXFLAGS)
+
+InitializeIntArray.o: InitializeIntArray.cpp
+	$(CPP) -c InitializeIntArray.cpp -o InitializeIntArray.o $(CXXFLAGS)
+
+ClearStringArray.o: ClearStringArray.cpp
+	$(CPP) -c ClearStringArray.cpp -o ClearStringArray.o $(CXXFLAGS)
+
+FindGreatestIntArray.o: FindGreatestIntArray.cpp
+	$(CPP) -c FindGreatestIntArray.cpp -o FindGreatestIntArray.o $(CXXFLAGS)
+
+ArrayTrackValue.o: ArrayTrackValue.cpp
+	$(CPP) -c ArrayTrackValue.cpp -o ArrayTrackValue.o $(CXXFLAGS)
+
+FindStringInArray.o: FindStringInArray.cpp
+	$(CPP) -c FindStringInArray.cpp -o FindStringInArray.o $(CXXFLAGS)
+
+OutputArray.o: OutputArray.cpp
+	$(CPP) -c OutputArray.cpp -o OutputArray.o $(CXXFLAGS)
+
+SumIntegerArray.o: SumIntegerArray.cpp
+	$(CPP) -c SumIntegerArray.cpp -o SumIntegerArray.o $(CXXFLAGS)
+
+AverageIntegerArray.o: AverageIntegerArray.cpp
+	$(CPP) -c AverageIntegerArray.cpp -o AverageIntegerArray.o $(CXXFLAGS)
+
+InputArray.o: InputArray.cpp
+	$(CPP) -c InputArray.cpp -o InputArray.o $(CXXFLAGS)

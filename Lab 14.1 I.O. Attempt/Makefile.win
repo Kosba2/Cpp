@@ -1,0 +1,57 @@
+# Project: Lab 14.1
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = PrintLabHeader.o "Lab\ 14.o" OutputInstructions.o GetPlayerNames.o GetAndCheckCharResponse.o DisplayDie.o PlayOneTurn.o RollDie.o PressEnterToRoll.o DisplayWinner.o $(RES)
+LINKOBJ  = PrintLabHeader.o "Lab 14.o" OutputInstructions.o GetPlayerNames.o GetAndCheckCharResponse.o DisplayDie.o PlayOneTurn.o RollDie.o PressEnterToRoll.o DisplayWinner.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib"  
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = "Lab 14.1"
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before "Lab 14.1" all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "Lab 14.1" $(LIBS)
+
+PrintLabHeader.o: PrintLabHeader.cpp
+	$(CPP) -c PrintLabHeader.cpp -o PrintLabHeader.o $(CXXFLAGS)
+
+"Lab\ 14.o": Lab\ 14.cpp
+	$(CPP) -c "Lab 14.cpp" -o "Lab 14.o" $(CXXFLAGS)
+
+OutputInstructions.o: OutputInstructions.cpp
+	$(CPP) -c OutputInstructions.cpp -o OutputInstructions.o $(CXXFLAGS)
+
+GetPlayerNames.o: GetPlayerNames.cpp
+	$(CPP) -c GetPlayerNames.cpp -o GetPlayerNames.o $(CXXFLAGS)
+
+GetAndCheckCharResponse.o: GetAndCheckCharResponse.cpp
+	$(CPP) -c GetAndCheckCharResponse.cpp -o GetAndCheckCharResponse.o $(CXXFLAGS)
+
+DisplayDie.o: DisplayDie.cpp
+	$(CPP) -c DisplayDie.cpp -o DisplayDie.o $(CXXFLAGS)
+
+PlayOneTurn.o: PlayOneTurn.cpp
+	$(CPP) -c PlayOneTurn.cpp -o PlayOneTurn.o $(CXXFLAGS)
+
+RollDie.o: RollDie.cpp
+	$(CPP) -c RollDie.cpp -o RollDie.o $(CXXFLAGS)
+
+PressEnterToRoll.o: PressEnterToRoll.cpp
+	$(CPP) -c PressEnterToRoll.cpp -o PressEnterToRoll.o $(CXXFLAGS)
+
+DisplayWinner.o: DisplayWinner.cpp
+	$(CPP) -c DisplayWinner.cpp -o DisplayWinner.o $(CXXFLAGS)
